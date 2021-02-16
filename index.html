@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script >
+    AOS.init()
+
+// You can also pass an optional settings object
+// below listed default settings
+AOS.init({
+  // Global settings:
+  disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
+  startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
+  initClassName: 'aos-init', // class applied after initialization
+  animatedClassName: 'aos-animate', // class applied on animation
+  useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
+  disableMutationObserver: false, // disables automatic mutations' detections (advanced)
+  debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
+  throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
+  
+
+  // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
+  offset: 120, // offset (in px) from the original trigger point
+  delay: 0, // values from 0 to 3000, with step 50ms
+  duration: 400, // values from 0 to 3000, with step 50ms
+  easing: 'ease', // default easing for AOS animations
+  once: false, // whether animation should happen only once - while scrolling down
+  mirror: false, // whether elements should animate out while scrolling past them
+  anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
+
+});
+    </script>
+</head>
+
+<body>
+    <div  data-aos="fade-right" class="fixed-top">
+        <div class="container">
+            <div class="navbar">
+                <div class="navbar-left col-3">
+                    <!-- <img src="https://i.pinimg.com/originals/55/0e/0f/550e0f28b84642e2a6a7404a9a2085bf.jpg"
+                        alt=""> -->
+                    <input type="text" class="search mt-4" placeholder="Поиск">
+                </div>
+                <div class="mt-3 hamburger-menu col-8">
+                    <input type="checkbox" id="menu__toggle">
+                    <label for="menu__toggle" class="menu__btn">
+                        <span></span>
+                    </label>
+                    <ul class="navbar__menu menu__box">
+                        <li class="navbar__item">Фильмы</li>
+                        <li class="navbar__item">Мультфильмы</li>
+                        <li class="navbar__item">Сериалы</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- <div class="header_welcome">
+                <h1>Welcome to our cinema shop</h1>
+            </div> -->
+        </div>
+    </div>
+    <header>
+        <div class="overlay"></div>
+        <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+          <source src="./video/Малена. Моника Белуччи. (online-video-cutter.com).mp4" type="video/mp4">
+        </video>
+        <div class="container h-100">
+          <div class="d-flex h-100 text-center align-items-center">
+            <div class="w-100 text-white">  
+              <h1 class="display-3">Mshop</h1>
+              <p class="lead mb-0">Онлайн-Магазин</p>
+            </div>
+          </div>
+        </div>
+      </header>
+      
+    <div class="button">
+        <button data-aos="zoom-out-down" class="btn-add">Добавить Фильм</button>
+    
+    </div>
+    <div class="main-modal" >
+        <div class="inner-modal">
+            <div class="close">
+                <button class="btn-close">X</button>
+            </div>
+            <h2 style='margin: 0'>Добавление фильма</h2>
+            <div class="edit-task">
+                <input type="text" class="add-name" placeholder='Название Фильма'>
+                <input type="text" class="add-price" placeholder='Цена'>
+                <input type="tel" class="add-genre" placeholder='Жанр'>
+                <input type="tel" class="add-preview" placeholder='Вставьте картинку'>
+            </div>
+                <button class="btn-save">Save</button>
+        </div>
+    </div>
+    
+    <div class="block">
+        <ul class="list"></ul>
+    </div>
+    <div class="edit-modal" >
+        <div class="edit-inner-modal">
+            
+            <div class="close">
+                <button class="btn-close">X</button>
+            </div>
+            <h2 style='margin: 0'>Введите исправление</h2>
+            <div class="edit-task">
+                <input type="text" class="edit-name" placeholder='Название Фильма'>
+                <input type="text" class="edit-price" placeholder='Цена'>
+                <input type="tel" class="edit-genre" placeholder='Жанр'>
+                <input type="tel" class="edit-preview" placeholder='Вставьте картинку'>
+            </div>
+                <button class="btn-savechange">Save</button>
+        </div>
+    </div>
+    <div class="buttons container">
+        <button class="prev-btn btn btn-light">Пред</button>
+        <button class="next-btn btn btn-light">След</button>
+    </div>
+    <!-- <div class="recommendation">
+        <h1 data-aos="flip-up" class="recomh1">Наши рекоммендации</h1>
+        <div class="recom">
+            <img src="./img/екш.jpg" alt="">
+            <img src="./img/2.jpg" alt="">
+            <img src="./img/3.jpg" alt="">
+        </div> -->
+
+    </div>
+    <footer>
+        <!-- <div class="container"> -->
+            <div class="row footer-block text-center justify-content-between">
+                <div class="footer__info d-flex flex-column justify-content-around">
+                    <a data-aos="flip-left" href="">Политика <br> конфиденциальности</a>
+                </div>
+                <div class="footer__inf d-flex text-center justify-content-center">
+                    <ul>
+                        <li>
+                            <a data-aos="flip-left" href="">Главная</a>
+                        </li> 
+                        <li>
+                            <a data-aos="flip-left" href="">О нас</a> 
+                        </li>
+                        <li>
+                            <a data-aos="flip-left" href="">Отзывы</a> 
+                        </li>
+                    </ul>
+                </div>
+                 <div class="footer__info d-flex justify-content-center">
+                    <ul class="ul-footer">
+                        <li>
+                            <a href="https://www.instagram.com/"><img src='./img/photo5233232778059952780.jpg' alt="" class="img"></a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/"><img src="./img/photo5233232778059952779.jpg" alt="" class="img"></a> 
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/"><img src="./img/photo5233232778059952783.jpg" alt="" class="img"></a> 
+                        </li>
+                    </ul>
+                </div> 
+                 <div class="footer__info d-flex flex-column justify-content-between">
+                    <a href="">г. Бишкек</a>
+                    <a href="#">+996550157055</a>
+                    <a href="">Eshkere@gmail.com</a>
+                </div>
+            </div>
+        <!-- </div> -->
+    </footer>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
